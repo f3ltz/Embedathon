@@ -1,7 +1,30 @@
 import asyncio
 import websockets
 import sys  
-from decipher import process_lines
+
+def process_lines(lines):
+    """
+    Processes a list of strings where each string contains digits.
+    Alternates between creating '*' and ' ' based on the digits and outputs the result.
+    
+    :param lines: List of strings containing digits
+    :return: List of processed strings
+    """
+    results = []
+    for raw in lines:
+        result = []
+        space_or_star = 0  # 0 for '*', 1 for ' '
+        for ch in raw:
+            count = int(ch)  # Convert character to integer
+            if space_or_star == 0:
+                result.append('*' * count)  # Add count number of '*'
+                space_or_star = 1  # Switch to ' '
+            else:
+                result.append(' ' * count)  # Add count number of ' '
+                space_or_star = 0  # Switch to '*'
+        results.append("".join(result))
+    return results
+
 async def receive_message():
     uri = "ws://192.168.114.119:81"
     no_exchange_timeout = 30  # Time in seconds to wait for data before stopping
