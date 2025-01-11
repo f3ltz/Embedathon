@@ -132,6 +132,12 @@ structure of the pattern.` This meant we needed to alternate between the two sym
 
 #### d. Output
 ![receive output](/final_task/milestone2/photos/output.png)
+
+
+
+https://github.com/user-attachments/assets/2d24559f-222d-41d2-809e-943fc90f1c7d
+
+
 ---
 ## Milestone 3: Displaying the output on the LED matrix display
 ## Displaying on the output on the matrix 
