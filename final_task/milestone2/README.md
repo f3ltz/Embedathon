@@ -40,3 +40,9 @@ structure of the pattern.` This meant we needed to alternate between the two sym
   3. Press the reset button on your ESP32
   4. Clone the repo to a location of your choice on the receiving pc and change directory to that location
   5. Run `/final_task/milestone2/receive.py`
+
+
+#### d. Output
+![receive output](/final_task/milestone2/photos/output.png)
+
+https://github.com/user-attachments/assets/2d24559f-222d-41d2-809e-943fc90f1c7d
