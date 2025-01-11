@@ -1,3 +1,27 @@
+def process_lines(lines):
+    """
+    Processes a list of strings where each string contains digits.
+    Alternates between creating '*' and ' ' based on the digits and outputs the result.
+    
+    :param lines: List of strings containing digits
+    :return: List of processed strings
+    """
+    results = []
+    for raw in lines:
+        result = []
+        space_or_star = 0  # 0 for '*', 1 for ' '
+        for ch in raw:
+            count = int(ch)  # Convert character to integer
+            if space_or_star == 0:
+                result.append('*' * count)  # Add count number of '*'
+                space_or_star = 1  # Switch to ' '
+            else:
+                result.append(' ' * count)  # Add count number of ' '
+                space_or_star = 0  # Switch to '*'
+        results.append("".join(result))
+    return results
+
+# Example usage:
 lines = [
     "18141312131254144313133",
     "1711131213131415111313121312131",
@@ -8,18 +32,6 @@ lines = [
     "521312131213141413121313343"
 ]
 
-for raw in lines:
-    result = []
-    space_or_star = 0  
-    for ch in raw:
-        count = int(ch)  
-        if space_or_star == 0:
-            
-            result.append('*' * count)
-            space_or_star = 1
-        else:
-
-            result.append(' ' * count)
-            space_or_star = 0
-   
-    print("".join(result))
+output = process_lines(lines)
+for line in output:
+    print(line)
