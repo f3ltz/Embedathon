@@ -166,6 +166,14 @@ To do this, we need to turn on column 2,4 and 6. We will also need to turn on ro
 
 ### Outputs
 
+
+https://github.com/user-attachments/assets/64e0fbd5-a0c3-468b-9900-873369a79fb2
+
+
+https://github.com/user-attachments/assets/343a28c0-091d-4ae0-9c37-55ac918fe2c2
+
+
+
 ---
 ## References
 
