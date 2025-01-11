@@ -1,7 +1,7 @@
 # Candy Queen Embedathon
 
 ---
-## Milestone 1  How we got the values from esp32's NVS
+## Milestone 1: How we got the values from esp32's NVS
 
 ### Step 1. EXTRACTING NVS DATA USING HEX EDITOR
 1. First install [esptool.py](https://docs.espressif.com/projects/esptool/en/latest/esp32/) 
@@ -87,7 +87,7 @@ void loop() {
 ```
 
 ---
-## Milestone 2 How we sent to and decrypted the message on another PC
+## Milestone 2: How we sent to and decrypted the message on another PC
 
 ### Step 1. (Sort of) Manual Decryption
 
@@ -111,7 +111,7 @@ structure of the pattern.` This meant we needed to alternate between the two sym
 
 ### Step 2. Actually sending the data to the second PC
 #### a. ESP32
-- On the ESP we have a websocket running which takes the Bin data from NVS of the ESP and converts it to readable format using the Preferences library.
+- On the ESP we have a websocket running which takes the Key values from NVS of the ESP and converts it to readable format using the Preferences library.
 - It then sends the data to the computer which decrypts it.
 - **[This](final_task/milestone2/transmit_password_websocket/transmit_password_websocket.ino)** is the code which does this.
 
@@ -121,16 +121,19 @@ structure of the pattern.` This meant we needed to alternate between the two sym
 - Second part of the script deals with decrypting the data received from the websocket. Once we have stored the received data in a string, we parse through it and print `*` and ` ` according to the rules established in manual decryption part.
 - Upon performing this action, this is the output received.
 
-- **[This]()** is the code which performs all this. To run this code follow the following steps:
+#### c. Running the code
+**[This](/final_task/milestone2/receive.py)** is the code which performs all this. To run this code follow the following steps:
 
-  1. Clone the Embedathon repo to your desired location
-  2. Change directory to the Embedathon repo
-  3. Source the venv:
-      3a
+  1. Change the ssid and password in transmit_password_websocket to the ssid and password of your network.
+  2. Upload the code in transmit_password_websocket onto your ESP32.
+  3. Press the reset button on your ESP32
+  4. Clone the repo to a location of your choice on the receiving pc and change directory to that location
+  5. Run `/final_task/milestone2/receive.py`
 
-
-
-
+#### d. Output
+![receive output](/final_task/milestone2/photos/output.png)
+---
+## Milestone 3: Displaying the output on the LED matrix display
 ## Displaying on the output on the matrix 
 1. Connect according to pin diagram; detailed connections refer [connections](learning\led_matrix\connection.txt)
 ![LED MATRIX diagram](final_task/photos/led_matrix_pin.jpeg)  
