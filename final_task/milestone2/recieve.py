@@ -1,7 +1,7 @@
 import asyncio
 import websockets
 import sys  
-
+from decipher import process_lines
 async def receive_message():
     uri = "ws://192.168.114.119:81"
     no_exchange_timeout = 30  # Time in seconds to wait for data before stopping
@@ -15,6 +15,11 @@ async def receive_message():
                     message = await asyncio.wait_for(websocket.recv(), timeout=no_exchange_timeout)
                     print("Message received from ESP32:")
                     print(message)
+                    output_list = [line for line in message.strip().split("\n")]
+                    # print(output_list)
+                    output = process_lines(output_list)
+                    for line in output:
+                        print(line)
                 except asyncio.TimeoutError:
                     print(f"No exchange for {no_exchange_timeout} seconds. Stopping the program.")
                     sys.exit(0)  # Exit the program
