@@ -1,0 +1,12 @@
+row 1 to 8 from pin	21 22 23 25 26 27 32 33
+
+column 1 to 8 - 4 5 13 14 16 17 18 19 
+
+black 1
+white 2
+peach/pink 3
+red 4
+orange 5
+yellow 6
+green 7
+blue  8
