@@ -1,5 +1,13 @@
 # Candy Queen Embedathon
 
+Team Candy Queen's submission for IEEE Embedathon 2025. </br>
+Team members :-
+|Idx|Name|Roll No.|Contact|
+|---|---|---|---|
+| 1 | Ashmit  | 231EC109   |  ashmitrsambrani.231ec109@nitk.edu.in |
+| 2 | Asrith  | 231EC110  | asrith.231ec110@nitk.edu.in  |
+| 3 | Ranjit | 231EE159  | ranjittanneru.231ee159@nitk.edu.in  |
+| 4 | Rudra | 231EC147  | rudra.231ec147@nitk.edu.in  |
 ---
 ## Milestone 1: How we got the values from esp32's NVS
 
